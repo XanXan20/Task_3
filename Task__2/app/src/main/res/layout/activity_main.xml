@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <EditText
+            android:id="@+id/personName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Введите имя"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="70dp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_marginTop="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout"
+        >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="中國人"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="chinese"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="español"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:onClick="spanish"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="English"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:onClick="english"/>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="हिंदी"
+            android:backgroundTint="@android:color/holo_purple"
+            android:onClick="hindi"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="عرب"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:onClick="arab"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="বাংলা"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:onClick="bengal"/>
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="Português"
+            android:backgroundTint="@android:color/darker_gray"
+            android:onClick="portuguese"/>
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="Русский"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:onClick="russian"/>
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="日本"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="japanese"/>
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="basa jawa"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:onClick="javanese"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/answerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/answerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Результат"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
