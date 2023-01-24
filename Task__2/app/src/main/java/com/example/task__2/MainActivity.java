@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         layout.setBackground(button.getBackground());
 
         textView.setText("你好, " + name.getText().toString());
+
     }
 
     public void spanish(View view) {
